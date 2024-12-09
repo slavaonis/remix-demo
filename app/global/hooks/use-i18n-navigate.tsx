@@ -1,4 +1,4 @@
-import {LinkProps, Path, useNavigate} from '@remix-run/react'; // eslint-disable-line no-restricted-imports
+import {LinkProps, Path, useNavigate} from '@remix-run/react';
 import {useTranslation} from 'react-i18next';
 
 //

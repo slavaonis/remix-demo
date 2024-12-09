@@ -41,8 +41,8 @@ module.exports = {
         },
         formComponents: ['Form'],
         linkComponents: [
-          { name: 'Link', linkAttribute: 'to' },
-          { name: 'NavLink', linkAttribute: 'to' },
+          {name: 'Link', linkAttribute: 'to'},
+          {name: 'NavLink', linkAttribute: 'to'},
         ],
         'import/resolver': {
           typescript: {},
@@ -84,34 +84,20 @@ module.exports = {
     // Custom rules
     {
       files: ['**/*.{js,jsx,ts,tsx}'],
-      extends: [
-        "plugin:prettier/recommended",
-      ],
+      extends: ['plugin:prettier/recommended'],
       rules: {
-        'react/jsx-curly-brace-presence': [1, { props: 'never', children: 'never' }],
+        'react/jsx-curly-brace-presence': [1, {props: 'never', children: 'never'}],
         'import/default': 'off',
         'import/no-named-as-default': 'off',
         'import/no-named-as-default-member': 'off',
         'import/no-anonymous-default-export': 'warn',
-        'lines-between-class-members': ['error', 'always', { exceptAfterSingleLine: true }],
-        'max-lines': ['warn', { max: 300, skipComments: true, skipBlankLines: true }],
+        'lines-between-class-members': ['error', 'always', {exceptAfterSingleLine: true}],
+        'max-lines': ['warn', {max: 300, skipComments: true, skipBlankLines: true}],
         'padding-line-between-statements': [
           'error',
-          { blankLine: 'always', prev: '*', next: 'return' },
-          { blankLine: 'always', prev: ['multiline-block-like'], next: '*' },
-          { blankLine: 'always', prev: '*', next: ['multiline-block-like'] },
-        ],
-        'no-restricted-imports': [
-          'error',
-          {
-            paths: [
-              {
-                name: '@remix-run/react',
-                importNames: ['useNavigate'],
-                message: 'Please use useI18nNavigate() instead',
-              },
-            ],
-          },
+          {blankLine: 'always', prev: '*', next: 'return'},
+          {blankLine: 'always', prev: ['multiline-block-like'], next: '*'},
+          {blankLine: 'always', prev: '*', next: ['multiline-block-like']},
         ],
         'import/order': [
           'error',
@@ -119,10 +105,10 @@ module.exports = {
             'newlines-between': 'always',
             groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
             pathGroups: [
-              { pattern: '@mui/**', group: 'external', position: 'after' },
-              { pattern: '~/services/**', group: 'external', position: 'after' },
-              { pattern: '~/global/hooks/**', group: 'external', position: 'after' },
-              { pattern: '~/global/components/**', group: 'external', position: 'after' }
+              {pattern: '@mui/**', group: 'external', position: 'after'},
+              {pattern: '~/services/**', group: 'external', position: 'after'},
+              {pattern: '~/global/hooks/**', group: 'external', position: 'after'},
+              {pattern: '~/global/components/**', group: 'external', position: 'after'},
             ],
             pathGroupsExcludedImportTypes: ['builtin'],
           },
